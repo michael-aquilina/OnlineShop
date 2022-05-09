@@ -1,0 +1,26 @@
+
+<div class="row">
+  <div class="col-1">
+    <div class="image">
+      <img src="./assets/products/{{item.image}}" class="card-img img-fluid" alt="">
+    </div>
+  </div>
+  <div class="col-5">
+    <p>{{ item.title }}</p>
+  </div>
+  <div class="col-3">
+    <div class="quantity buttons_added">
+      <input type="button" value="-" class="minus" (click)="minus()">
+      <input type="number" step="1" min="1" max="" name="quantity" value="{{item.quantity}}" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
+      <input type="button" value="+" class="plus" (click)="plus()">
+    </div>
+  </div>
+  <div class="col-2">
+    <p class="price">${{ item.totalPrice }}</p>
+  </div>
+  <div class="col-1">
+    <button type="button" class="btn btn-outline-danger" (click)="delete()">
+      <fa-icon [icon]="faTrash"></fa-icon>
+    </button>
+  </div>
+</div>

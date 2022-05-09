@@ -1,0 +1,15 @@
+<main *ngIf="hasItems">
+  <div *ngFor="let item of basket.items" class="row">
+    <app-basket-item [item]="item" (update)="update()" class="basket-row">
+    </app-basket-item>
+  </div>
+  <button type="button" class="btn btn-outline-danger" (click)="clearBasket()">
+    <fa-icon [icon]="faTrash"></fa-icon>
+    <span> Empty Basket</span>
+  </button>
+</main>
+<main *ngIf="!hasItems">
+  <div class="row">
+    <p>There are no items in the basket</p>
+  </div>
+</main>

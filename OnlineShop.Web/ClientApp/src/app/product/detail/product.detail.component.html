@@ -1,0 +1,30 @@
+<main>
+  <div class="card" *ngIf="product">
+    <div class="card__title">
+      <div class="icon">
+        <a href="#"><i class="fa fa-arrow-left"></i></a>
+      </div>
+    </div>
+    <div class="card__body">
+      <div class="half">
+        <div class="featured_text">
+          <h1>{{ product.title }}</h1>
+          <p class="price">${{ product.price }}</p>
+        </div>
+        <div class="image">
+          <img src="./assets/products/{{ product.image }}" alt="">
+        </div>
+      </div>
+      <div class="half">
+        <div class="description">
+          <p>{{ product.description }}"</p>
+        </div>
+      </div>
+    </div>
+    <div class="card__footer">
+      <div class="action">
+        <button  type="button" (click)="buy()">Add to cart</button>
+      </div>
+    </div>
+  </div>
+</main>
